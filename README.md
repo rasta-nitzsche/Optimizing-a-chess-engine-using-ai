@@ -16,3 +16,6 @@ We have implemented the quiescence search algorithm. The latter consists in taki
 
 - **Our stability condition:** a configuration is stable if and only if the king of the current player is not threatened and has not captured an opponent's piece. During our resolution of the TP and our research carried out, we noted that there is another position which is not considered stable and which is the “promotion”. The Promotion of a pawn consists in replacing it immediately by another piece when it arrives on the last row. However, we did not take this case into consideration during the solution because it never appears during a duel between 2 computers.
 - **Our condition for generation of successors under quiescence:** when the leaf is not stable, we generate a successor if and only if: it has not already been visited, if its father has failed or if there is a capture.
+
+## Results : 
+The test consists of testing the configuration with the optimized minmax vs the old minmax. We vary the depth (3,4,5,6) and number of alternatives considered (infinite alternatives slows down the process). For each test, the optimized minmax wins.
